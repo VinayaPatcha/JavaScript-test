@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.20/themes/base/jquery-ui.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" /><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="http://code.jquery.com/ui/1.8.20/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="modal.js" type="text/javascript"></script>
+    <script src="javscript.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+</head>
+
+<body>
+  
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" id="loading">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <h1>Registered Employees</h1>
+    <div>
+        
+        <button type="submit" id="dlt">Edit</button>
+        <button type="submit" id="dlt">Add</button>
+        
+        <button type="submit" id="dlt">Delete</button>
+
+    </div>
+ 
+
+    <p id="showData"></p>
+    <div class="demo">
+
+        <div id="dialog-form" title="Create new user">
+            <p class="validateTips">All form fields are required.</p>
+
+            <form>
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+                    <label for="name">Username</label>
+                    <input type="text" name="username" id="username" class="text ui-widget-content ui-corner-all" />
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+                    <label for="name">Phone</label>
+                    <input type="text" name="phone" id="phone" class="text ui-widget-content ui-corner-all" />
+                    <label for="name">Website</label>
+                    <input type="text" name="website" id="website" class="text ui-widget-content ui-corner-all" />
+                </fieldset>
+            </form>
+        </div>
+
+
+       
+        <button id="create-user">Create new user</button>
+
+    </div> 
+</body>
+
+</html>
