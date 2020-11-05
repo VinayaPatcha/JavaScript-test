@@ -54,11 +54,11 @@ $(function () {
                     fetch('https://jsonplaceholder.typicode.com/posts', {
                         method: 'POST',
                         body: JSON.stringify({
-                            name: $('name1').val(),
-                            username: $('username1').val(),
-                            email: $('email1').val(),
-                            phone: $('phone1').val(),
-                            website: $('website1').val()
+                            name: $('#name1').val(),
+                            username: $('#username1').val(),
+                            email: $('#email1').val(),
+                            phone: $('#phone1').val(),
+                            website: $('#website1').val()
                         }),
                         headers: {
                           'Content-type': 'application/json; charset=UTF-8',
@@ -76,14 +76,14 @@ $(function () {
             allFields.val("").removeClass("ui-state-error");
         }
     });
+
     $("#dialog-form1").dialog({
         autoOpen: false,
         height: 600,
         width: 650,
         modal: true,
         buttons: {
-            "Update User": function () {
-                $(this).attr('id', 'nwUsr');
+            "Update User": function () { 
                 var bValid = true;
                 allFields.removeClass("ui-state-error");
  
@@ -93,15 +93,23 @@ $(function () {
                     var alt = $('input[type=checkbox]:checked').attr('id');
 
                     var splt = alt.split("_");
-                    fetch('https://jsonplaceholder.typicode.com/users/' + splt[1], {
-                        method: 'PATCH',
+                    var id =splt[1];
+                    console.log( id);  
+                    console.log( $('#name').val());
+                    console.log( $('#username').val());
+                    console.log( $('#email').val());
+                    console.log( $('#phone').val());
+                    console.log( $('#website').val());
+                    console.log('https://jsonplaceholder.typicode.com/users/' + id);
+                    fetch('https://jsonplaceholder.typicode.com/users/' + id, {
+                        method: 'PUT',
                         body: JSON.stringify({
-                            id: splt[1],
+                            id: id,
                             name: $('name').val(),
                             username: $('username').val(),
                             email: $('email').val(),
                             phone: $('phone').val(),
-                            website: $('website').val()
+                            website: $('website').val(),
                         }),
                         headers: {
                             'Content-type': 'application/json; charset=UTF-8',
